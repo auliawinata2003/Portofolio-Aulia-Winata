@@ -214,7 +214,8 @@ body {
   gap: 2rem;
 }
 */
-.about-text h3,.about-edu h3 {
+.about-text h3,
+.about-edu h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--primary-color);
@@ -464,9 +465,10 @@ body {
 }
 
 .contact-container {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-text: center;
 }
 
 .contact-form .form-group {
@@ -500,7 +502,6 @@ body {
   text-align: center;
 }
 
-/* Pesan Validasi */
 .error-msg {
   color: #ef4444;
   font-size: 0.8rem;
@@ -517,29 +518,41 @@ body {
 }
 
 /* Kontak Sosial */
+.contact-info {
+  max-width: 600px; /* Membatasi lebar teks agar nyaman dibaca saat di tengah */
+  margin: 0 auto;
+}
+
 .contact-info h3 {
-  margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .contact-info p {
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    text-align: center;
 }
 
+/* Membuat deretan ikon media sosial berada di tengah */
 .social-icons {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: center; /* Kunci utama ikon rata tengah */
+    gap: 2rem; /* Jarak antar ikon sedikit diperlebar agar elegan */
 }
 
 .social-icons a {
-  font-size: 1.8rem;
-  color: var(--primary-color);
-  transition: var(--transition-fast);
+    font-size: 2.2rem; /* Ukuran ikon sedikit diperbesar agar lebih menonjol */
+    color: var(--primary-color);
+    transition: var(--transition-fast);
 }
 
 .social-icons a:hover {
-  color: var(--accent-color);
-  transform: translateY(-5px);
+    color: var(--accent-color);
+    transform: translateY(-5px);
 }
 
 /* ==========================================================================
